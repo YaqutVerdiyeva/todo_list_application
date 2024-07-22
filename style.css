@@ -1,0 +1,113 @@
+body {
+  background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20200709/pngtree-sky-blue-sky-white-clouds-floating-realistic-clouds-background-image_350954.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .todoapp-section {
+    height: 100vh;
+    width: 60%;
+    .heading {
+      margin: 50px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      p {
+        font-size: 32px;
+      }
+      .fa-check {
+        color: #fff;
+        background-color: #000;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        transition: 0.5s all;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .tasks {
+      h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+      ul {
+        li {
+          margin: 5px 0;
+          list-style: none;
+          background-color: rgb(255, 255, 255, 0.5);
+          padding: 15px;
+          display: flex;
+          justify-content: space-between;
+          font-size: 16px;
+          border-radius: 5px;
+          transition: 0.5s all;
+          p {
+            font-weight: bold;
+          }
+          .fa-trash {
+            cursor: pointer;
+            transition: 0.5s all;
+            &:hover {
+              color: #62b9fe;
+            }
+          }
+          &:hover {
+            background-color: rgb(255, 255, 255, 0.7);
+          }
+        }
+      }
+    }
+    .add-todo-section {
+      position: fixed;
+      bottom: 20px;
+      width: 60%;
+      .task-input {
+        position: relative;
+        width: 100%;
+        background-color: rgb(255, 255, 255, 0.5);
+        border: 2px solid transparent;
+        transition: 0.5s all;
+        border-radius: 5px;
+        padding: 15px;
+        font-size: 16px;
+        &:focus {
+          outline: none;
+          border: 2px solid #262a3b;
+        }
+      }
+      .add-btn {
+        background-color: #262a3b;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        font-size: 16px;
+        color: #fff;
+        padding: 0 18px;
+        border: none;
+        position: absolute;
+        height: 100%;
+        right: 0;
+        transition: 0.5s all;
+        &:hover {
+          background-color: #404664;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
